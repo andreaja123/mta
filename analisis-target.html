@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Target - SmartTA Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] flex h-screen overflow-hidden text-slate-800">
+
+    <aside class="w-64 bg-white border-r border-slate-200 flex flex-col hidden md:flex z-10">
+        <div class="h-16 flex items-center px-6 border-b border-slate-100">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 overflow-hidden relative mr-3">
+                <div class="absolute w-full h-full bg-blue-600 rounded-lg" style="clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);"></div>
+                <div class="absolute w-1.5 h-3 bg-yellow-400 bottom-0 left-1.5 rounded-t-sm"></div>
+                <div class="absolute w-1.5 h-4 bg-slate-200 bottom-0 left-3.5 rounded-t-sm"></div>
+                <div class="absolute w-1.5 h-2 bg-blue-300 bottom-0 left-5.5 rounded-t-sm"></div>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-slate-900">SmartTA</span>
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-6 px-4 space-y-1">
+            <p class="px-2 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Portal Mahasiswa</p>
+            
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Dashboard
+            </a>
+            
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                Input Target
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Log Progress
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-blue-700 bg-blue-50 border border-blue-100 transition-all shadow-sm">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                Analisis Target
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                Laporan Progress
+            </a>
+        </div>
+        
+        <div class="p-4 border-t border-slate-100">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 text-white flex items-center justify-center font-bold text-sm shadow-md">
+                    AD
+                </div>
+                <div>
+                    <p class="text-sm font-semibold text-slate-800">Andi Darmawan</p>
+                    <p class="text-xs text-slate-500">Mahasiswa</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="flex-1 flex flex-col h-screen overflow-hidden">
+        
+        <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 z-0">
+            <div class="flex items-center text-sm text-slate-500">
+                <span>TA Portal</span>
+                <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="font-medium text-slate-800">Analisis Target</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button class="text-slate-400 hover:text-blue-600 transition-colors relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-y-auto p-6 md:p-8">
+            <div class="max-w-6xl mx-auto">
+                
+                <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Analisis Target & Performa</h1>
+                        <p class="text-slate-500 mt-2">Pantau metrik pengerjaan dan komparasi target vs realisasi Tugas Akhirmu.</p>
+                    </div>
+                    <div class="flex items-center bg-white border border-slate-200 rounded-lg p-1 shadow-sm">
+                        <button class="px-3 py-1.5 text-sm font-medium text-blue-700 bg-blue-50 rounded-md">Bulan Ini</button>
+                        <button class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-md">Semester Ini</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Total Progres</p>
+                            <h3 class="text-2xl font-bold text-slate-900">65%</h3>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Target Selesai</p>
+                            <h3 class="text-2xl font-bold text-slate-900">14 <span class="text-sm font-normal text-slate-400">/ 22</span></h3>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Target Terlambat</p>
+                            <h3 class="text-2xl font-bold text-red-600">2 <span class="text-sm font-normal text-slate-400">Tugas</span></h3>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Sisa Waktu Sidang</p>
+                            <h3 class="text-2xl font-bold text-slate-900">45 <span class="text-sm font-normal text-slate-400">Hari</span></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-bold text-slate-900">Rencana vs Realisasi (Produktivitas Mingguan)</h3>
+                            <div class="flex items-center gap-3 text-xs font-medium text-slate-500">
+                                <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-sm bg-slate-200"></span> Rencana</span>
+                                <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-sm bg-blue-500"></span> Realisasi</span>
+                            </div>
+                        </div>
+                        
+                        <div class="relative h-64 w-full flex items-end justify-between gap-2 sm:gap-4 mt-8 pb-6 border-b border-slate-100">
+                            <div class="absolute inset-0 flex flex-col justify-between pb-6 pointer-events-none">
+                                <div class="w-full border-t border-slate-100 border-dashed h-0"><span class="absolute -mt-2 -left-6 text-xs text-slate-400">100</span></div>
+                                <div class="w-full border-t border-slate-100 border-dashed h-0"><span class="absolute -mt-2 -left-6 text-xs text-slate-400">75</span></div>
+                                <div class="w-full border-t border-slate-100 border-dashed h-0"><span class="absolute -mt-2 -left-6 text-xs text-slate-400">50</span></div>
+                                <div class="w-full border-t border-slate-100 border-dashed h-0"><span class="absolute -mt-2 -left-6 text-xs text-slate-400">25</span></div>
+                                <div class="w-full h-0"><span class="absolute -mt-2 -left-4 text-xs text-slate-400">0</span></div>
+                            </div>
+
+                            <div class="relative w-full flex justify-center items-end group">
+                                <div class="w-4 sm:w-8 bg-slate-200 rounded-t-sm h-[40%] absolute left-1/2 -translate-x-full"></div>
+                                <div class="w-4 sm:w-8 bg-blue-500 rounded-t-sm h-[45%] absolute left-1/2"></div>
+                                <span class="absolute -bottom-6 text-xs text-slate-500 text-center w-full">Minggu 1</span>
+                            </div>
+                            <div class="relative w-full flex justify-center items-end group">
+                                <div class="w-4 sm:w-8 bg-slate-200 rounded-t-sm h-[60%] absolute left-1/2 -translate-x-full"></div>
+                                <div class="w-4 sm:w-8 bg-blue-500 rounded-t-sm h-[50%] absolute left-1/2"></div>
+                                <span class="absolute -bottom-6 text-xs text-slate-500 text-center w-full">Minggu 2</span>
+                            </div>
+                            <div class="relative w-full flex justify-center items-end group">
+                                <div class="w-4 sm:w-8 bg-slate-200 rounded-t-sm h-[75%] absolute left-1/2 -translate-x-full"></div>
+                                <div class="w-4 sm:w-8 bg-blue-500 rounded-t-sm h-[80%] absolute left-1/2"></div>
+                                <span class="absolute -bottom-6 text-xs text-slate-500 text-center w-full">Minggu 3</span>
+                            </div>
+                            <div class="relative w-full flex justify-center items-end group">
+                                <div class="w-4 sm:w-8 bg-slate-200 rounded-t-sm h-[90%] absolute left-1/2 -translate-x-full"></div>
+                                <div class="w-4 sm:w-8 bg-blue-500 rounded-t-sm h-[65%] absolute left-1/2"></div>
+                                <span class="absolute -bottom-6 text-xs text-slate-500 text-center w-full">Minggu 4</span>
+                            </div>
+                            <div class="relative w-full flex justify-center items-end group">
+                                <div class="w-4 sm:w-8 bg-slate-200 rounded-t-sm h-[100%] absolute left-1/2 -translate-x-full"></div>
+                                <div class="w-4 sm:w-8 bg-blue-500 rounded-t-sm h-[30%] absolute left-1/2"></div>
+                                <span class="absolute -bottom-6 text-xs text-slate-500 text-center w-full">Minggu 5</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-3 bg-blue-50 text-blue-800 text-sm rounded-lg flex items-start gap-2 border border-blue-100">
+                            <svg class="w-5 h-5 shrink-0 mt-0.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                            <p><strong>Insight:</strong> Pada Minggu 4 dan 5, realisasi Anda berada di bawah rencana. Pertimbangkan untuk mengejar ketertinggalan pada minggu ini agar tidak mengganggu jadwal akhir.</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+                        <h3 class="font-bold text-slate-900 mb-6">Distribusi Progres per Tahap</h3>
+                        
+                        <div class="flex-1 space-y-5">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium text-slate-700">Bab 1 & 2 (Pendahuluan & Teori)</span>
+                                    <span class="text-green-600 font-bold">100%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2.5">
+                                    <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium text-slate-700">Bab 3 (Metodologi)</span>
+                                    <span class="text-blue-600 font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium text-slate-700">Implementasi Aplikasi (Coding)</span>
+                                    <span class="text-yellow-600 font-bold">40%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2.5">
+                                    <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium text-slate-700">Bab 4 & 5 (Hasil & Kesimpulan)</span>
+                                    <span class="text-slate-500 font-bold">0%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2.5">
+                                    <div class="bg-slate-300 h-2.5 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1.5">
+                                    <span class="font-medium text-slate-700">Publikasi Jurnal</span>
+                                    <span class="text-slate-500 font-bold">0%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2.5">
+                                    <div class="bg-slate-300 h-2.5 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-100">
+                            <button class="w-full py-2.5 px-4 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Unduh Laporan Analisis
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

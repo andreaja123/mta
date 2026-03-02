@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa - SmartTA Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] flex h-screen overflow-hidden text-slate-800">
+
+    <aside class="w-64 bg-white border-r border-slate-200 flex flex-col hidden md:flex z-10">
+        <div class="h-16 flex items-center px-6 border-b border-slate-100">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 overflow-hidden relative mr-3">
+                <div class="absolute w-full h-full bg-blue-600 rounded-lg" style="clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);"></div>
+                <div class="absolute w-1.5 h-3 bg-yellow-400 bottom-0 left-1.5 rounded-t-sm"></div>
+                <div class="absolute w-1.5 h-4 bg-slate-200 bottom-0 left-3.5 rounded-t-sm"></div>
+                <div class="absolute w-1.5 h-2 bg-blue-300 bottom-0 left-5.5 rounded-t-sm"></div>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-slate-900">SmartTA</span>
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-6 px-4 space-y-1">
+            <p class="px-2 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Portal Mahasiswa</p>
+            
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-blue-700 bg-blue-50 border border-blue-100 transition-all shadow-sm">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Dashboard
+            </a>
+            
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                Input Target
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Log Progress
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                Analisis Target
+            </a>
+
+            <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                Laporan Progress
+            </a>
+        </div>
+        
+        <div class="p-4 border-t border-slate-100">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-blue-400 text-white flex items-center justify-center font-bold text-sm shadow-md">
+                    AD
+                </div>
+                <div>
+                    <p class="text-sm font-semibold text-slate-800">Andi Darmawan</p>
+                    <p class="text-xs text-slate-500">Mahasiswa</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="flex-1 flex flex-col h-screen overflow-hidden">
+        
+        <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 z-0">
+            <div class="flex items-center text-sm text-slate-500">
+                <span>TA Portal</span>
+                <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="font-medium text-slate-800">Dashboard Utama</span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button class="text-slate-400 hover:text-blue-600 transition-colors relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                    <span class="absolute top-0 right-0 flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500 border-2 border-white"></span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-y-auto p-6 md:p-8">
+            <div class="max-w-6xl mx-auto space-y-6">
+                
+                <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl shadow-md p-6 sm:p-8 text-white relative overflow-hidden flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                    <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white opacity-10 blur-2xl pointer-events-none"></div>
+                    <div class="absolute bottom-0 right-32 w-32 h-32 rounded-full bg-blue-400 opacity-20 blur-xl pointer-events-none"></div>
+                    
+                    <div class="relative z-10">
+                        <h1 class="text-2xl md:text-3xl font-bold mb-2">Selamat pagi, Andi! 👋</h1>
+                        <p class="text-blue-100 text-sm md:text-base max-w-xl">Saat ini kamu berada di tahap <strong>Penyusunan Bab 3 & Implementasi</strong>. Jangan lupa jadwal bimbingan selanjutnya dengan Dr. Budi Santoso hari Kamis ini.</p>
+                    </div>
+                    
+                    <button class="relative z-10 whitespace-nowrap px-5 py-2.5 bg-white text-blue-700 font-semibold text-sm rounded-xl shadow-sm hover:bg-blue-50 transition-colors">
+                        Lapor Progres Hari Ini
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                        <div class="p-3 bg-indigo-50 text-indigo-600 rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Status Proposal</p>
+                            <p class="text-lg font-bold text-slate-900">Disetujui</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                        <div class="p-3 bg-green-50 text-green-600 rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Total Bimbingan</p>
+                            <p class="text-lg font-bold text-slate-900">6 <span class="text-sm font-normal text-slate-400">kali</span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                        <div class="p-3 bg-red-50 text-red-600 rounded-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">Tenggat Target Terdekat</p>
+                            <p class="text-lg font-bold text-red-600">Besok</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+                            <div class="flex items-center justify-between mb-5">
+                                <h3 class="font-bold text-slate-900 text-lg">Target Pengerjaan Aktif</h3>
+                                <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-700">Lihat Semua</a>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-sm transition-all group">
+                                    <div class="mt-0.5">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-600 cursor-pointer">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">Perbaiki Flowchart Sistem</h4>
+                                        <p class="text-xs text-slate-500 mt-1">Sesuai catatan revisi bimbingan terakhir.</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-red-700 bg-red-100 rounded-full mb-1">Prioritas Tinggi</span>
+                                        <p class="text-xs font-medium text-slate-600">Besok, 23:59</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:bg-slate-50 transition-all group">
+                                    <div class="mt-0.5">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-600 cursor-pointer">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">Slicing UI Dashboard Web</h4>
+                                        <p class="text-xs text-slate-500 mt-1">Gunakan Tailwind CSS untuk portal mahasiswa.</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-blue-700 bg-blue-100 rounded-full mb-1">Normal</span>
+                                        <p class="text-xs font-medium text-slate-600">Jumat, 5 Mar</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-100 hover:bg-slate-50 transition-all group">
+                                    <div class="mt-0.5">
+                                        <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-600 cursor-pointer">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-semibold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">Kumpulkan Dataset</h4>
+                                        <p class="text-xs text-slate-500 mt-1">Minimal 100 baris data dummy untuk testing.</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="inline-block px-2.5 py-1 text-[10px] font-semibold text-slate-600 bg-slate-100 rounded-full mb-1">Rendah</span>
+                                        <p class="text-xs font-medium text-slate-600">Minggu depan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-1 space-y-6">
+                        
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+                            <h3 class="font-bold text-slate-900 text-lg mb-4">Pesan Pembimbing</h3>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 relative">
+                                <div class="absolute -left-2 -top-2 w-6 h-6 bg-blue-600 rounded-full text-white flex items-center justify-center border-2 border-white">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                                </div>
+                                <div class="ml-2">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <p class="text-xs font-semibold text-blue-800">Dr. Budi Santoso</p>
+                                        <p class="text-[10px] text-blue-500">2 jam yang lalu</p>
+                                    </div>
+                                    <p class="text-sm text-slate-700 italic">"Andi, tolong lampirkan *mockup* desain di laporan progres kamu minggu ini ya biar saya bisa lihat alurnya."</p>
+                                    <button class="mt-3 text-xs font-medium text-blue-600 hover:underline">Balas Komentar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+                            <h3 class="font-bold text-slate-900 text-lg mb-5">Progres Saat Ini</h3>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1 font-medium">
+                                        <span class="text-slate-600">Pendahuluan (Bab 1)</span>
+                                        <span class="text-green-600">Selesai</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-green-500 h-1.5 rounded-full" style="width: 100%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1 font-medium">
+                                        <span class="text-slate-600">Tinjauan Pustaka (Bab 2)</span>
+                                        <span class="text-green-600">Selesai</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-green-500 h-1.5 rounded-full" style="width: 100%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1 font-medium">
+                                        <span class="text-slate-600">Metodologi (Bab 3)</span>
+                                        <span class="text-blue-600">Revisi</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full" style="width: 85%"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1 font-medium">
+                                        <span class="text-slate-400">Implementasi & Hasil (Bab 4)</span>
+                                        <span class="text-slate-400">Belum</span>
+                                    </div>
+                                    <div class="w-full bg-slate-100 rounded-full h-1.5"><div class="bg-slate-200 h-1.5 rounded-full" style="width: 0%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
